@@ -57,6 +57,10 @@
     color: rgb(235, 225, 225);
   }
 
+  #signup-instead:hover {
+    background-color: #3486eb;
+  }
+
   button:not(.logout) {
     background-color: rgb(190, 213, 190);
     border: 0;
@@ -221,10 +225,6 @@
     font-size: 90%;
     margin-bottom: .5%;
     opacity: .6;
-  }
-  
-  .new-post-form input {
-    width: 300px;
   }
   
   .edit-post-form {
