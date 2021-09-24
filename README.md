@@ -4,7 +4,7 @@
 ## Description
 
 
-![alt text](https://github.com/jdeschat/Note-taker-challenge/blob/main/assets/img/Tech-blog.png)
+![alt text](https://github.com/jdeschat/Tech-blog/blob/main/assets/img/Tech-blog.png)
 
 ## Table of Contents
 - [Description](#description)
