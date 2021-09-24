@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
             'id',
-            // 'post_url',
             'title',
+            'description',
             'created_at'
             // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
     })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
-
+            console.log(posts);
             res.render('homepage', {
                 posts,
                 loggedIn: req.session.loggedIn
@@ -50,10 +50,9 @@ router.get('/post/:id', (req, res) => {
         },
         attributes: [
             'id',
-            // 'post_url',
             'title',
+            'description',
             'created_at'
-            // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
         include: [
             {

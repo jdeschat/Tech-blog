@@ -8,16 +8,12 @@
             <div>
                 <div>Title</div>
                 <input name="post-title" type="text" value="{{post.title}}" />
-                {{!-- <span>({{post.post_url}})</span> --}}
             </div>
             <div>
                 <div>Content</div>
                 <input name="post-content" type="text" value="{{post.comments.length}}" />
             </div>
             <div>
-                {{!-- {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date
-                post.created_at}}
-                | --}}
                 <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment"
                     post.comments.length}}</a>
             </div>

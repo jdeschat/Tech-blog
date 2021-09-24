@@ -32,12 +32,6 @@ router.get('/:id', (req, res) => {
                     attributes: ['title']
                 }
             }
-            // {
-            //     model: Post,
-            //     attributes: ['title'],
-            //     through: Vote,
-            //     as: 'voted_posts'
-            // }
         ]
     })
         .then(dbUserData => {
@@ -79,11 +73,11 @@ router.post('/login', (req, res) => {
     // expects {email: 'lernantino@gmail.com', password: 'password1234'}
     User.findOne({
         where: {
-            email: req.body.email
+            username: req.body.username
         }
     }).then(dbUserData => {
         if (!dbUserData) {
-            res.status(400).json({ message: 'No user with that email address!' });
+            res.status(400).json({ message: 'No user with that username!' });
             return;
         }
 
@@ -101,6 +95,36 @@ router.post('/login', (req, res) => {
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
+    });
+});
+
+router.post('/signup', async (req, res) => {
+    // expects {email: 'lernantino@gmail.com', password: 'password1234'}
+    var newUser = new User({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+    });
+
+    await User.findOne({
+        where: {
+            username: req.body.username,
+            email: req.body.email
+        }
+    }).then(async profile => {
+        if (!profile) {
+            await newUser.save()
+                .then(() => {
+                    res.status(200).send(newUser);
+                })
+                .catch(err => {
+                    console.log("Error is ", err.message);
+                });
+        } else {
+            res.send("User already exists...");
+        }
+    }).catch(err => {
+        console.log("Error is", err.message);
     });
 });
 
