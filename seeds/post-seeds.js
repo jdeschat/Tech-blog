@@ -3,20 +3,17 @@ const { Post } = require('../models');
 const postdata = [
     {
         title: 'Object-Relational Mapping',
-        description: 'hey there',
-        // post_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
+        description: 'I have really loved learning about ORMs. It’s really simplified the way I create queries in SQL!',
         user_id: 1
     },
     {
         title: 'Authentication vs. Authorization',
-        // post_url: 'https://nasa.gov/donec.json',
-        description: 'hey there',
+        description: 'There is a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system.',
         user_id: 2
     },
     {
         title: 'Why MVC is so important',
-        description: 'hey there',
-        // post_url: 'https://europa.eu/parturient/montes/nascetur/ridiculus/mus/etiam/vel.aspx',
+        description: 'MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the Controller layer for application logic.',
         user_id: 3
     }
 ];
