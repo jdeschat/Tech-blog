@@ -13,10 +13,9 @@ router.get('/', withAuth, (req, res) => {
         },
         attributes: [
             'id',
-            // 'post_url',
             'title',
-            'created_at',
-            // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+            'description',
+            'created_at'
         ],
         include: [
             {
@@ -35,6 +34,7 @@ router.get('/', withAuth, (req, res) => {
     })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
+            console.log(posts);
             res.render('dashboard', { posts, loggedIn: true });
         })
         .catch(err => {
@@ -47,10 +47,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
     Post.findByPk(req.params.id, {
         attributes: [
             'id',
-            // 'post_url',
             'title',
-            'created_at',
-            // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+            'description',
+            'created_at'
         ],
         include: [
             {
