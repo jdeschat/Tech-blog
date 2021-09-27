@@ -91,7 +91,7 @@ Made with [contributors-img](https://contrib.rocks).
 - MySQL2
 - Sequelize
 
-for authentication
+For authentication
 - dotenv
 - crypt
 - express-session
@@ -100,10 +100,6 @@ for authentication
 ## Questions
 My Github username is jdeschat, which can be accessed here https://github.com/jdeschat/Tech-blog.
 
-The Github page for this project can be accessed using the following link: https://jdeschat.github.io/Tech-blog/.
+This app is deployed through Heroku, which can be accessed here https://tech-blog12.herokuapp.com/
 
 You can reach me at jdeschat@gmail.com with additional questions.
-  
-Below are links to my demo video and the video location on my Github, respectfully:
-- [Link to Demo Video](https://youtu.be/)
-- [Video location in Github](https://github.com/jdeschat/Tech-blog/tree/main/assets/video)
