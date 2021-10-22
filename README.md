@@ -2,7 +2,7 @@
 [![npm](https://badge.fury.io/js/inquirer.svg)](http://badge.fury.io/js/inquirer)
 
 ## Description
-
+This website allows developers to write about tech so they can publish articles, blog posts, and thoughts and opinions.
 
 ![alt text](https://github.com/jdeschat/Tech-blog/blob/main/assets/img/Tech-blog.png)
 
